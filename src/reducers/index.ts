@@ -1,16 +1,12 @@
 import { combineReducers } from 'redux';
-import { persistReducer } from 'redux-persist';
-import localforage from 'localforage';
-
-import userReducer from './user';
-
-const persistConfig = {
-  key: 'root',
-  storage: localforage,
-};
+import todos from './todos';
+import visibilityFilter from './visibilityFilter';
 
 const AppReducer = combineReducers({
-  user: persistReducer(persistConfig, userReducer),
+  todos,
+  visibilityFilter,
 });
+
+export type RootState = ReturnType<typeof AppReducer>;
 
 export default AppReducer;

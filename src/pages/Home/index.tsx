@@ -1,28 +1,23 @@
 import React from 'react';
 import { Layout } from 'antd';
-import logo from './logo.png';
-import './style.css';
+import Filter from './components/Footer';
+import AddTodo from './components/AddTodo';
+import VisibleTodoList from './components/TodoList';
 
-const App = () => {
-  return (
-    <Layout>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/pages/Home/index.ts</code> and save to reload.
-          </p>
-          <a
-            href="https://origin.co.th"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Origin Property
-          </a>
-        </header>
-      </div>
-    </Layout>
-  );
-};
+const { Header, Content, Footer } = Layout;
+
+const App = () => (
+  <Layout>
+    <Header style={{ background: '#ffffff' }}>
+      <AddTodo />
+    </Header>
+    <Content style={{ background: '#ffffff' }}>
+      <VisibleTodoList />
+    </Content>
+    <Footer>
+      <Filter />
+    </Footer>
+  </Layout>
+);
 
 export default App;
