@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../../reducers';
-import { VisibilityFilters } from '../../../reducers/types/visibilityFilter';
-import { setVisibilityFilter } from '../../../reducers/visibilityFilter';
+import { RootState } from '../../reducers';
+import { VisibilityFilters } from '../../reducers/types/visibilityFilter';
+import { setVisibilityFilter } from '../../reducers/visibilityFilter';
+import { Button } from 'antd';
 
 const Link: React.FC<{ filter: VisibilityFilters }> = ({
   filter,
@@ -14,7 +15,7 @@ const Link: React.FC<{ filter: VisibilityFilters }> = ({
   const dispatch = useDispatch();
 
   return (
-    <button
+    <Button
       onClick={() => dispatch(setVisibilityFilter(filter))}
       disabled={active}
       style={{
@@ -22,7 +23,7 @@ const Link: React.FC<{ filter: VisibilityFilters }> = ({
       }}
     >
       {children}
-    </button>
+    </Button>
   );
 };
 

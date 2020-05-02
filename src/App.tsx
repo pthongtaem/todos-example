@@ -1,12 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
-import WebRoute from './config/WebRoute';
+import Todos from './todos';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <WebRoute />
+      <Todos />
     </Provider>
   );
 };
