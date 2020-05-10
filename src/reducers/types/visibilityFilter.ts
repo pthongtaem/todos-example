@@ -1,5 +1,5 @@
 export const SET_VISIBILITY_FILTER =
-  'todos-example/visibilityFilter/SET_VISIBILITY_FILTER';
+  'todos-redux-example/visibilityFilter/SET_VISIBILITY_FILTER';
 
 export interface TodosState {
   id: number;
