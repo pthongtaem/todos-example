@@ -7,17 +7,11 @@ import VisibleTodoList from './components/TodoList';
 const { Header, Content, Footer } = Layout;
 
 const App = () => (
-  <Layout>
-    <Header style={{ background: '#ffffff' }}>
-      <AddTodo />
-    </Header>
-    <Content style={{ background: '#ffffff' }}>
-      <VisibleTodoList />
-    </Content>
-    <Footer>
-      <Filter />
-    </Footer>
-  </Layout>
+  <div>
+    <AddTodo />
+    <VisibleTodoList />
+    <Filter />
+  </div>
 );
 
 export default App;

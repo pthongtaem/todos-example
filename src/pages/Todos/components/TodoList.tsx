@@ -4,9 +4,9 @@ import Todo from './Todo';
 import {
   VisibilityFilters,
   TodosState,
-} from '../../reducers/types/visibilityFilter';
-import { RootState } from '../../reducers';
-import { toggleTodo } from '../../reducers/todos';
+} from '../../../reducers/types/visibilityFilter';
+import { RootState } from '../../../reducers';
+import { toggleTodo } from '../../../reducers/todos';
 
 const getVisibleTodos = (todos: TodosState[], filter: VisibilityFilters) => {
   switch (filter) {

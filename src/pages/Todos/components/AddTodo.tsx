@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../../reducers/todos';
+import { addTodo } from '../../../reducers/todos';
 import { Button, Input } from 'antd';
 
 const AddTodo = () => {
